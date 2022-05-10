@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@300 & display=swap');
 
 * {
     margin: 0%;
@@ -7,7 +7,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgray;
 }
 
 a {
@@ -20,19 +21,57 @@ header {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: rgb(73, 93, 193);
+    background-color: lightcoral;
+    box-shadow: rgba(255, 255, 255, 0.);
     padding: 20px;
     color: white;
 }
 
+@keyframes h1 {
+        0%{
+            background-color: white;
+            border: 2px solid;
+            border-color: white;
+            border-radius: 10px;
+        }
+        50%{
+            background-color: gainsboro;
+            border: 4px solid;
+            border-color: gainsboro;
+            border-radius: 20px;
+        }
+        100%{
+            background-color: gray;
+            border: 4px solid;
+            border-color: gray;
+            border-radius: 30px;
+        }
+    }
+
 header h1 {
     color: white;
+    animation-name: h1;
+    animation-duration: 3s;
+    animation-iteration-count:  infinite;
+}
+
+header h1:hover {
+    border-bottom: 3px solid pink;
+    font-size: 20px;
+    transition: all 1s;
 }
 
 header nav a {
     text-decoration: none;
     color: white;
     padding: 10px;
+
+}
+
+header nav a:hover {
+    border-bottom: 3px solid pink;
+    font-size: 20px;
+    transition: all 1s
 }
 
 .div-animacao {
@@ -43,12 +82,21 @@ header nav a {
     align-items: center;
     width: 100%;
 }
-
 .animada {
     margin: 0 10px 0 0;
     width: 100px;
     height: 100px;
-    background-color: black;
+    background-color: gray;
+    border-radius: 50px;
+}
+
+.animada:hover {
+    height: 120px;
+    width: 120px;
+    border-radius: 8px;
+    border: solid pink;
+    border-radius: 100px;
+    transition: all 3s;
 }
 
 section {
@@ -77,6 +125,17 @@ form input {
     border-radius: 7px;
 }
 
+form input:hover {
+    border: 3px lightgreen solid;
+    transition: 0.5s;
+}
+
+form input:focus {
+    border: 3px, skyblue solid;
+    background-color: gray;
+    color: black;
+}
+
 form textarea {
     width: 100%;
     border-radius: 7px;
@@ -89,7 +148,15 @@ form button {
     width: 100%;
     border-radius: 7px;
     border: none;
-    background-color: rgb(228, 227, 227);
+    background-color: lightcoral;
     font-weight: bold;
     text-transform: uppercase;
+}
+
+form button:hover {
+    padding: 15px;
+    background-color: lightgreen;
+    font-weight: bold;
+    color: white;
+    transition: all 0.5s;
 }
